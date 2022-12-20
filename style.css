@@ -1,0 +1,343 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 55%;
+  line-height: 2.4rem;
+  letter-spacing: 0.7px;
+  height: 100vh;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: white;
+  background-image: radial-gradient(
+    circle at top,
+    hsl(214, 47%, 23%) 20%,
+    hsl(237, 49%, 15%) 70%
+  );
+  color: #fff;
+  display: flex;
+
+  justify-content: center;
+  height: 80rem;
+}
+
+article {
+  position: relative;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 50rem;
+  padding: 2rem 4rem;
+  margin-top: 4rem;
+  margin-bottom: 15rem;
+  border: 3px solid hsl(217, 16%, 45%);
+  border-radius: 20px;
+}
+
+.elements_text {
+  display: flex;
+  flex-direction: column;
+}
+
+.element_text {
+  display: inline-block;
+  font-size: 3rem;
+}
+
+.score_box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  width: 17rem;
+}
+.score_text {
+  color: hsl(229, 64%, 46%);
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 3px;
+}
+
+.score_number {
+  color: hsl(217, 16%, 35%);
+  font-size: 7rem;
+  font-weight: 700;
+}
+
+.pentagon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.element_btn {
+  background-color: #fff;
+  height: 15rem;
+  width: 15rem;
+  cursor: pointer;
+  border: double 15px transparent;
+  border-radius: 800px;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  position: absolute;
+}
+
+.btn_rock {
+  top: 23rem;
+  left: 47rem;
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top, hsl(349, 70%, 56%), hsl(349, 71%, 52%));
+  box-shadow: 0 8px hsl(349, 71%, 35%), 0px 6px rgba(153, 153, 153, 0.415) inset;
+  animation: mymoveRock 2s normal;
+}
+@keyframes mymoveRock {
+  from {
+    top: 5rem;
+    left: 35rem;
+  }
+  to {
+    top: 23rem;
+    left: 47rem;
+  }
+}
+.btn_rock:active {
+  box-shadow: 0 8px hsl(349, 71%, 22%), 0px 6px rgba(66, 66, 66, 0.325) inset;
+}
+.btn_scissor {
+  top: -7rem;
+  left: 37.5rem;
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top, hsl(40, 84%, 53%), hsl(39, 89%, 49%));
+  box-shadow: -0 8px hsl(39, 89%, 39%), 0 6px rgba(113, 113, 113, 0.415) inset;
+  animation: mymoveScissor 2s normal;
+}
+@keyframes mymoveScissor {
+  from {
+    top: 5rem;
+    left: 35rem;
+  }
+  to {
+    top: -7rem;
+    left: 37.5rem;
+  }
+}
+.btn_scissor:active {
+  box-shadow: -0 8px hsl(39, 89%, 26%), 0px 6px rgba(66, 66, 66, 0.325) inset;
+}
+
+.btn_paper {
+  top: 5rem;
+  left: 53rem;
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  box-shadow: 0 8px hsl(230, 89%, 55%), 0px 6px rgba(153, 153, 153, 0.415) inset;
+  animation: mymovePaper 2s normal;
+}
+
+@keyframes mymovePaper {
+  from {
+    top: 5rem;
+    left: 35rem;
+  }
+  to {
+    top: 5rem;
+    left: 53rem;
+  }
+}
+
+.btn_paper:active {
+  box-shadow: 0 8px hsl(230, 89%, 42%), 0px 6px rgba(66, 66, 66, 0.325) inset;
+}
+
+.btn_spock {
+  top: 5rem;
+  left: 21rem;
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top, hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+  box-shadow: 0 8px hsl(189, 59%, 43%), 0px 6px rgba(153, 153, 153, 0.415) inset;
+  animation: mymoveSpock 2s normal;
+}
+
+@keyframes mymoveSpock {
+  from {
+    top: 5rem;
+    left: 35rem;
+  }
+  to {
+    top: 5rem;
+    left: 21rem;
+  }
+}
+
+.btn_spock:active {
+  box-shadow: 0 8px hsl(189, 59%, 30%), 0px 6px rgba(66, 66, 66, 0.325) inset;
+}
+
+.btn_lizard {
+  top: 23rem;
+  left: 26rem;
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top, hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+  box-shadow: 0 8px hsl(261, 73%, 50%), 0px 6px rgba(153, 153, 153, 0.415) inset;
+  animation: mymoveLizard 2s normal;
+}
+
+@keyframes mymoveLizard {
+  from {
+    top: 5rem;
+    left: 35rem;
+  }
+  to {
+    top: 23rem;
+    left: 26rem;
+  }
+}
+.btn_lizard:active {
+  box-shadow: 0 8px hsl(261, 73%, 37%), 0px 6px rgba(66, 66, 66, 0.325) inset;
+}
+
+.step2 {
+  display: flex;
+  justify-content: center;
+  gap: 15rem;
+}
+
+.step2_text {
+  font-size: 2rem;
+  letter-spacing: 3px;
+}
+
+.picked_element_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.picked_element {
+  width: 18rem;
+  height: 18rem;
+  border: double 20px transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: static;
+}
+
+.house_picked {
+  width: 18rem;
+  height: 18rem;
+  background-color: hsla(0, 0%, 0%, 0.127);
+}
+
+.game_result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.game_result_text {
+  display: inline-block;
+  font-size: 5rem;
+}
+
+.btn_play-again {
+  display: inline-block;
+  height: 7rem;
+  width: 27rem;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: hsl(217, 16%, 29%);
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.btn_play-again:active {
+  background-color: rgba(255, 255, 255, 0.763);
+}
+
+.rules {
+  top: 40rem;
+  left: 110rem;
+  position: absolute;
+  padding: 1rem 3rem;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.modal-window {
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-window-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50rem;
+  height: 60rem;
+  background-color: white;
+  border-radius: 20px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+.modal-window-header {
+  color: hsl(237, 49%, 15%);
+  font-size: 3rem;
+  position: absolute;
+  top: 7rem;
+  left: 5rem;
+  letter-spacing: 1px;
+}
+
+.close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  top: 7.3rem;
+  left: 43rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: inline-block;
+}
